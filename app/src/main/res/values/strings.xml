@@ -8,6 +8,10 @@
 	<string name="title_execution_status">Executed</string>
 	<string name="title_execution">Executed</string>
 
+	<string name="title_loading">Loading</string>
+	<string name="title_error">Error</string>
+	<string name="text_about_auth">Authenticating with Firebase…</string>
+
 	<string name="title_edit_note">Edit Note</string>
 	<string name="title_create_note">Create Note</string>
 </resources>

@@ -7,6 +7,8 @@ import com.firebase.client.Firebase;
 public class App extends Application
 {
 	private static final String FIRE_BASE_BASE_URL = "https://svtaskmanager.firebaseio.com/";
+	private static final String USERS_METHODS = "Users";
+	private static final String TASKS_METHODS = "Tasks";
 
 	private Firebase mFirebase;
 	private String mUserId;
@@ -26,9 +28,9 @@ public class App extends Application
 
 	public Firebase getTasksFireBase()
 	{
-		return mFirebase.child("Users")
+		return mFirebase.child(USERS_METHODS)
 			.child(mUserId)
-			.child("Tasks");
+			.child(TASKS_METHODS);
 	}
 
 	public void setUserId(String userId)

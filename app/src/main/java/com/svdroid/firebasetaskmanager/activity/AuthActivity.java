@@ -56,7 +56,6 @@ public class AuthActivity extends AppCompatActivity implements GoogleApiClient.C
 					} else if (mGoogleApiClient.isConnected()) {
 						getGoogleOAuthTokenAndLogin();
 					} else {
-						Log.d(LOG_TAG, "Trying to connect to Google API");
 						mGoogleApiClient.connect();
 					}
 				}
@@ -70,8 +69,8 @@ public class AuthActivity extends AppCompatActivity implements GoogleApiClient.C
 			.build();
 
 		mAuthProgressDialog = new ProgressDialog(this);
-		mAuthProgressDialog.setTitle("Loading");
-		mAuthProgressDialog.setMessage("Authenticating with Firebase...");
+		mAuthProgressDialog.setTitle(getResources().getString(R.string.title_loading));
+		mAuthProgressDialog.setMessage(getResources().getString(R.string.text_about_auth));
 		mAuthProgressDialog.setCancelable(false);
 		mAuthProgressDialog.show();
 		((App) getApplication()).getBaseFireBase().addAuthStateListener(this);
@@ -115,7 +114,7 @@ public class AuthActivity extends AppCompatActivity implements GoogleApiClient.C
 	private void showErrorDialog(String message)
 	{
 		new AlertDialog.Builder(this)
-			.setTitle("Error")
+			.setTitle(getResources().getString(R.string.title_error))
 			.setMessage(message)
 			.setPositiveButton(android.R.string.ok, null)
 			.setIcon(android.R.drawable.ic_dialog_alert)
