@@ -80,8 +80,8 @@ public class AuthActivity extends AppCompatActivity implements GoogleApiClient.C
 	@Override
 	protected void onDestroy()
 	{
+		mAuthProgressDialog.dismiss();
 		super.onDestroy();
-
 		((App) getApplication()).getBaseFireBase().removeAuthStateListener(this);
 	}
 

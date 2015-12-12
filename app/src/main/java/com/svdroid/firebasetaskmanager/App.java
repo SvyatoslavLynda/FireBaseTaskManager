@@ -6,7 +6,6 @@ import com.firebase.client.Firebase;
 
 public class App extends Application
 {
-	private static final String TAG = "com.svdroid.firebaseexampletaskmanager.App";
 	private static final String FIRE_BASE_BASE_URL = "https://svtaskmanager.firebaseio.com/";
 
 	private Firebase mFirebase;
@@ -35,10 +34,5 @@ public class App extends Application
 	public void setUserId(String userId)
 	{
 		mUserId = userId;
-	}
-
-	public String getUserId()
-	{
-		return mUserId;
 	}
 }

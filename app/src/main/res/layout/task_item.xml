@@ -14,8 +14,8 @@
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:padding="8dp"
 		android:orientation="horizontal"
+		android:padding="8dp"
 		>
 
 		<LinearLayout
@@ -27,12 +27,25 @@
 			>
 
 			<TextView
+				android:id="@+id/is_executed"
+				style="@style/Base.TextAppearance.AppCompat.Title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:text="@string/title_execution"
+				android:textColor="@color/colorAccent"
+				android:visibility="gone"
+				android:textSize="14sp"
+				/>
+
+			<TextView
 				android:id="@+id/title"
 				style="@style/Base.TextAppearance.AppCompat.Title"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_gravity="center"
-				android:textSize="16sp"
+				android:layout_marginTop="8dp"
+				android:textSize="18sp"
 				/>
 
 			<TextView
